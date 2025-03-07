@@ -17,7 +17,7 @@ def analizar_comportamiento_usuario(datos):
 
 # Ejemplo de uso
 if __name__ == "__main__":
-    datos_ventas = cargar_datos('../data/ventas.csv')
+    datos_ventas = cargar_datos('data/ventas.csv')
     resumen, ventas_por_producto = analizar_ventas(datos_ventas)
     print(resumen)
     print(ventas_por_producto)
