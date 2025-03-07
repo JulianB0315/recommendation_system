@@ -11,8 +11,8 @@ def leer_csv_numpy(ruta_archivo):
 
 # Ejemplo de uso
 if __name__ == "__main__":
-    datos_pandas = leer_csv_pandas('../data/ventas.csv')
+    datos_pandas = leer_csv_pandas('data/ventas.csv')
     print(datos_pandas.head())
     
-    datos_numpy = leer_csv_numpy('../data/ventas.csv')
+    datos_numpy = leer_csv_numpy('data/ventas.csv')
     print(datos_numpy)
