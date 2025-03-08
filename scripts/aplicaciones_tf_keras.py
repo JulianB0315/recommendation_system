@@ -1,10 +1,10 @@
 import tensorflow as tf
-from tensorflow import Sequential
-from tensorflow import Dense
+from keras.models import Sequential
+from keras.layers import Dense
 import pandas as pd
 
 # Cargar datos
-datos = pd.read_csv('../data/ventas.csv')
+datos = pd.read_csv('data/ventas.csv')
 
 # Preprocesamiento de datos
 X = datos.drop('producto_comprado', axis=1).values
