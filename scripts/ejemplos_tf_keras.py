@@ -1,10 +1,10 @@
-import tensorflow as tf
-from tensorflow import Sequential
-from tensorflow import Dense
+import tensorflow
+from keras.models import Sequential
+from keras.layers import Dense
 import pandas as pd
 
 # Cargar datos
-datos = pd.read_csv('../data/ventas.csv')
+datos = pd.read_csv('data/ventas.csv')
 
 # Preprocesamiento de datos
 X = datos.drop('producto_comprado', axis=1).values
@@ -24,3 +24,11 @@ modelo.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'
 modelo.fit(X, y, epochs=10, batch_size=32)
 
 print('Entrenamiento completado')
+
+# Evaluar el modelo
+loss, accuracy = modelo.evaluate(X, y)
+print(f'Pérdida: {loss}, Precisión: {accuracy}')
+
+# Predecir productos que podrían interesar a los usuarios
+predicciones = modelo.predict(X)
+print('Predicciones:', predicciones)
