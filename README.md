@@ -17,5 +17,5 @@ Este proyecto tiene como objetivo desarrollar un sistema de recomendación de pr
 
 1. Clonar el repositorio:
    ```sh
-   git clone https://github.com/tu_usuario/recommendation_system.git
+   git clone https://github.com/JulianB0315/recommendation_system.git
    cd recommendation_system
